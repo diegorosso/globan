@@ -520,10 +520,6 @@ body.nav-active {
 
   }
 
-  :is(.service, .about) .section-text {
-    max-width: 420px;
-    margin-inline: auto;
-  }
 
   .contact-number {
     --fontSize-body-1: 3rem;
@@ -547,12 +543,19 @@ body.nav-active {
 }
 
 @media (min-width: 992px) {
+  .container,
+  :is(.service, .event) .container {
+    max-width: 800px;
+    width: 100%;
+    margin-inline: auto;
+  }
   :root {
     --section-space: 100px;
   }
 
   :is(.service, .event) .container {
     max-width: unset;
+
   }
 
   :is(.service, .event) .grid-list {
@@ -562,6 +565,7 @@ body.nav-active {
   :is(.service, .event) .grid-list li:last-child {
     grid-column: auto;
     width: 100%;
+
   }
   @media (min-width: 1200px) {
     :root {
@@ -569,7 +573,7 @@ body.nav-active {
     }
     .container,
     :is(.service, .event) .container {
-      max-width: 1200px;
+      max-width: 1000px;
       width: 100%;
       margin-inline: auto;
     }

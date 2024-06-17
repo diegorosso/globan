@@ -13,117 +13,30 @@
     </p>
 
     <ul class="grid-list">
-      <li>
+      <li *ngFor="let service of services">
         <div class="service-card">
-          <a href="#" class="has-before hover:shine">
-            <figure
-              class="card-banner img-holder"
-              style="--width: 285; --height: 336"
-            >
-              <img
-                src="../../../assets/images/pexels-designecologist-1779487.jpg"
-                width="285"
-                height="336"
-                loading="lazy"
-                alt="Breakfast"
-                class="img-cover"
-              />
+          <a href="#" class="has-before hover:shine" (click)="openModal(service)">
+            <figure class="card-banner img-holder" style="--width: 285; --height: 336">
+              <img [src]="service.image" width="285" height="336" loading="lazy" [alt]="service.title" class="img-cover" />
             </figure>
           </a>
-
           <div class="card-content">
             <h3 class="title-4 card-title">
-              <a href="#">Diseño Web</a>
+              <a href="#" (click)="openModal(service)">{{ service.title }}</a>
             </h3>
-
-            <a href="#" class="btn-text hover-underline label-2">Saber Más</a>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="service-card">
-          <a href="#" class="has-before hover:shine">
-            <figure
-              class="card-banner img-holder"
-              style="--width: 285; --height: 336"
-            >
-              <img
-                src="../../../assets/images/pexels-magnus-mueller-1398178-2818118.jpg"
-                width="285"
-                height="336"
-                loading="lazy"
-                alt="Appetizers"
-                class="img-cover"
-              />
-            </figure>
-          </a>
-
-          <div class="card-content">
-            <h3 class="title-4 card-title">
-              <a href="#"> Pauta publicitaria en Facobook & Instagram</a>
-            </h3>
-
-            <a href="#" class="btn-text hover-underline label-2">Saber Más</a>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="service-card">
-          <a href="#" class="has-before hover:shine">
-            <figure
-              class="card-banner img-holder"
-              style="--width: 285; --height: 336"
-            >
-              <img
-                src="../../../assets/images/pexels-jonathanborba-3052727.jpg"
-                width="285"
-                height="336"
-                loading="lazy"
-                alt="Drinks"
-                class="img-cover"
-              />
-            </figure>
-          </a>
-
-          <div class="card-content">
-            <h3 class="title-4 card-title">
-              <a href="#">Diseño Gráfico</a>
-            </h3>
-
-            <a href="#" class="btn-text hover-underline label-2">Saber Más</a>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="service-card">
-          <a href="#" class="has-before hover:shine">
-            <figure
-              class="card-banner img-holder"
-              style="--width: 285; --height: 336"
-            >
-              <img
-                src="../../../assets/images/pexels-cottonbro-3206167.jpg"
-                width="285"
-                height="336"
-                loading="lazy"
-                alt="Drinks"
-                class="img-cover"
-              />
-            </figure>
-          </a>
-
-          <div class="card-content">
-            <h3 class="title-4 card-title">
-              <a href="#">Producción de fotografía y video</a>
-            </h3>
-
-            <a href="#" class="btn-text hover-underline label-2">Saber Más</a>
+            <a href="#" class="btn-text hover-underline label-2" (click)="openModal(service)">Saber Más</a>
           </div>
         </div>
       </li>
     </ul>
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal" [class.show]="isModalOpen">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2>{{ selectedService?.title }}</h2>
+    <p>{{ selectedService?.description }}</p>
+  </div>
+</div>
