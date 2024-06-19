@@ -1,4 +1,4 @@
-<section class="section service bg-black-10 text-center" aria-label="service">
+<section class="section service bg-black-10 text-center" aria-label="service" id="service">
   <div class="container">
     <p class="section-subtitle label-2">Estrategias Digitales que Impactan</p>
 
@@ -15,7 +15,7 @@
     <ul class="grid-list">
       <li *ngFor="let service of services">
         <div class="service-card">
-          <a href="#" class="has-before hover:shine" (click)="openModal(service)">
+          <a  class="has-before hover:shine cursor" (click)="openModal(service)">
             <figure class="card-banner img-holder" style="--width: 285; --height: 336">
               <img [src]="service.image" width="285" height="336" loading="lazy" [alt]="service.title" class="img-cover" />
             </figure>
@@ -24,7 +24,7 @@
             <h3 class="title-4 card-title">
               <a href="#" (click)="openModal(service)">{{ service.title }}</a>
             </h3>
-            <a href="#" class="btn-text hover-underline label-2" (click)="openModal(service)">Saber Más</a>
+            <a  class="btn-text hover-underline label-2 cursor" (click)="openModal(service)">Saber Más</a>
           </div>
         </div>
       </li>
