@@ -509,6 +509,12 @@ body.nav-active {
   right: 10px;
 }
 
+.has-bg-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 @media (min-width: 575px) {
   :root {
 

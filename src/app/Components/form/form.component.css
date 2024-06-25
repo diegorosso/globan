@@ -63,6 +63,30 @@ textarea.input-field {
   background-position: top left;
 }
 
+.estilos-contacto {
+  font-family: "Questrial", sans-serif;
+  font-size: var(--fontSize-headline-1);
+  font-weight: var(--weight-regular);
+  line-height: var(--lineHeight-2);
+  text-align: center;
+}
+
+.parrafo-texto {
+  margin-block: 15px 30px;
+  text-align: center;
+}
+
+.fotocarnet {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.margin-form {
+  margin-top: 30rem;
+}
+
 @media (min-width: 575px) {
   .footer-brand>* {
     max-width: 460px;

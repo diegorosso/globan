@@ -8,6 +8,7 @@ import { ServiceComponent } from './Components/service/service.component';
 import { AboutComponent } from './Components/about/about.component';
 import { FormComponent } from './Components/form/form.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { TestimonialComponent } from './Components/testimonial/testimonial.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { FooterComponent } from './Components/footer/footer.component';
     HomeComponent,
     ServiceComponent,
     AboutComponent,
+    TestimonialComponent,
     FormComponent,
     FooterComponent,
   ],

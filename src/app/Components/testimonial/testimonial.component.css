@@ -1,0 +1,50 @@
+.testi {
+  /* padding-block-end: 340px; */
+  position: static;
+}
+
+.testi .quote {
+  font-size: 7rem;
+  font-family: "Questrial", sans-serif;
+  line-height: 0.7rem;
+}
+
+.testi .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-block: 40px 50px;
+}
+
+.testi .separator {
+  animation: rotate360 15s linear infinite
+}
+
+.profile .img {
+  margin-inline: auto;
+  border-radius: var(--radius-circle);
+  margin-block-end: 15px;
+}
+
+.testi .profile-name {
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-3);
+}
+
+@media (min-width: 992px) {
+  .testi-text {
+    max-width: 910px;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .form-left,
+  .form-right {
+    padding: 75px 60px;
+  }
+}
+
