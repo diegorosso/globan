@@ -69,9 +69,9 @@
 }
 
 @media (min-width: 1400px) {
-  .about-content {
+/*   .about-content {
     padding-inline-end: 90px;
-  }
+  } */
 
   .about .shape {
     display: block;
