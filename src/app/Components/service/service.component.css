@@ -131,3 +131,11 @@
 .cursor{
   cursor: pointer;
 }
+
+@media (max-width:576px){
+  .modal-content{
+    width: 90%;
+    margin-top: 15rem;
+  }
+
+}
