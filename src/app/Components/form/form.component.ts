@@ -34,7 +34,7 @@ export class FormComponent{
     accessToken: import.meta.env["NG_APP_EMAILJS_ACCESS_TOKEN"],
     template_params: {
       to_name: "Juan Manuel Gimenez",
-      to_email: "globalmkt.arg@gmail.com ",
+      to_email: "globalmkt.arg@gmail.com",
       from_name: "",
       from_lastname: "",
       from_email: "",
